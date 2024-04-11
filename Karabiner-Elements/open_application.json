@@ -1,0 +1,157 @@
+{
+    "description": "hyper + Appname to open it",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Visual Studio Code.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "w",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Wechat.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "e",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Microsoft Edge.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "p",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'preview.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "d",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'dingtalk.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "n",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'NeteaseMusic.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'google chrome.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "t",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'iTerm.app'"
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
