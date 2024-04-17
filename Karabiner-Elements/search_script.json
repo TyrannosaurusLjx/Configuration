@@ -1,0 +1,26 @@
+{
+    "description": "right_command  + F to search use python scripts",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "mandatory": [
+                        "right_command"
+                    ]
+                }
+            },
+            "to":  [
+                {
+                    "key_code": "f",
+                    "modifiers": [
+                            "left_command",
+                            "left_option",
+                            "left_control"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

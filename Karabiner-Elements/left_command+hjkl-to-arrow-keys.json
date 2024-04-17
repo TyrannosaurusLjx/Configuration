@@ -1,5 +1,5 @@
 {
-    "description": "Change left_command+hjkl to arrow keys",
+    "description": "Change left_command+hjkl to arrow keys in wechat and terminal",
     "manipulators": [
         {
             "conditions": [
