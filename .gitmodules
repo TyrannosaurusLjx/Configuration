@@ -1,3 +1,6 @@
 [submodule "neovim"]
 	path = neovim
 	url = git@github.com:TyrannosaurusLjx/Nvim.git
+[submodule "Neovide"]
+	path = Neovide
+	url = git@github.com:TyrannosaurusLjx/Neovide-NvChad.git
