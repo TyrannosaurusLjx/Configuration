@@ -1,17 +1,25 @@
 {
-    "description": "Change left_command+jk to command+arrow keys in preivew",
+    "description": "Change left_command+jk to command+arrow keys in Safari",
     "manipulators": [
         {
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.apple.Preview"
+                        "com.apple.Safari"
                     ],
                     "type": "frontmost_application_if"
                 }
             ],
             "from": {
-                "key_code": "j"
+                "key_code": "j",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
             },
             "to": [
                 {
@@ -24,13 +32,21 @@
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.apple.Preview"
+                        "com.apple.Safari"
                     ],
                     "type": "frontmost_application_if"
                 }
             ],
             "from": {
-                "key_code": "k"
+                "key_code": "k",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
             },
             "to": [
                 {
@@ -39,6 +55,5 @@
             ],
             "type": "basic"
         }
-  ]
+    ]
 }
-

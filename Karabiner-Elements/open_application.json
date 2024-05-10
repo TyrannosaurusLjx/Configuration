@@ -110,7 +110,7 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'NeteaseMusic.app'"
+                    "shell_command": "open -a 'neovide.app'"
                 }
             ],
             "type": "basic"
@@ -149,6 +149,44 @@
             "to": [
                 {
                     "shell_command": "open -a 'iTerm.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Safari.app'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "m",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Mathematica.app'"
                 }
             ],
             "type": "basic"
