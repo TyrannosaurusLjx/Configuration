@@ -1,0 +1,1 @@
+﻿{"0":"36b9d8dc-aec7-4dbe-a458-815d3698ef5e","3":"s","4":"var clipboard = \"<atext type=\"clipboard\">📋</atext>\";\nvar firstMatch = clipboard.match(/[0-9]+/);\nprint(firstMatch);","7":"js","10":"Extract number from clipboard","13":1688895639}

@@ -1,0 +1,1 @@
+﻿{"0":"2036344d-df46-49dd-8df6-76a96dd18d0c","3":"s","4":"var clipboard = \"<atext type=\"clipboard\">📋</atext>\";\nvar firstMatch = clipboard.match(/[0-9]+/);\nWScript.StdOut.Write(firstMatch);","7":"js","10":"Extract number from clipboard","13":1688895654}

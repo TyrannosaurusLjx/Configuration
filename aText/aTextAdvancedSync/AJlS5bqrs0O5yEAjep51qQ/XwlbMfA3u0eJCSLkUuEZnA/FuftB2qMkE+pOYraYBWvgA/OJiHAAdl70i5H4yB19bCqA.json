@@ -1,0 +1,1 @@
+﻿{"0":"00879838-6507-48ef-b91f-8c81d7d6c2a8","3":"s","4":"# generate random number between x and y:\n# echo $((x + RANDOM%(y-x+1)))\n\n# generate random number between 100 and 999\nr=$((100 + RANDOM % 900));\necho $r","7":"sh","10":"Random numer","11":"example","13":1641091293}
