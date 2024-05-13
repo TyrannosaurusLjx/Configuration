@@ -1,0 +1,80 @@
+
+{
+    "Insert subscript": {
+        "prefix": "sub",
+        "body": ["${1}<sub>${0}"],
+        "description": "Create a subscript."
+    },
+    "Insert superscript": {
+        "prefix": "sup",
+        "body": ["${1}<sup>${0}"],
+        "description": "Create a superscript."
+    },
+    "Insert Note": {
+        "prefix": ["note", "n"],
+        "body": "> [!NOTE]\n> ",
+        "description": "Insert Note"
+    },
+    "Insert Tip": {
+        "prefix": ["tip", "t"],
+        "body": "> [!TIP]\n> ",
+        "description": "Insert Tip"
+    },
+    "Insert Important": {
+        "prefix": ["important", "imp"],
+        "body": "> [!IMPORTANT]\n> ",
+        "description": "Insert Important"
+    },
+    "Insert Warning": {
+        "prefix": ["warning", "w"],
+        "body": "> [!WARNING]\n> ",
+        "description": "Insert Warning"
+    },
+    "Insert Caution": {
+        "prefix": ["caution", "c"],
+        "body": "> [!CAUTION]\n> ",
+        "description": "Insert Caution"
+    },
+
+    "sum": {  
+        "prefix": "sum",  
+        "description": "Sum the values of a field",  
+        "body": ["\\sum\\limits_{${1:i=0}}^{${2:\\infty}} ${3:x_i}"]  
+    },  
+    "integral": {  
+        "prefix": "int",  
+        "description": "Calculate the integral of a function",  
+        "body": ["\\int_{${1:a}}^{${2:b}} ${3:f(x)} ${4:dx}"]  
+    },  
+    "product": {  
+        "prefix": "prod",  
+        "description": "Calculate the product of a field",  
+        "body": ["\\prod\\limits_{${1:i=0}}^{${2:\\infty}} ${3:x_i}"]  
+    },  
+    "limit": {  
+        "prefix": "lim",  
+        "description": "Calculate the limit of a function",  
+        "body": ["\\lim\\limits_{${1:x\\to\\infty}} ${2:f(x)}"]  
+    },
+    "dingli": {
+        "prefix": "dingli",
+        "description": "定理标题",
+        "body": ["#### 定理 $1"]
+    },
+    "tuilun": {
+        "prefix": "tuilun",
+        "description": "推论标题",
+        "body": ["#### 推论 $1"]
+    },
+    "mingti":{
+        "prefix": "mingti",
+        "description": "命题标题",
+        "body": ["#### 命题 $1"]
+    },
+    "text":{
+    "prefix": "text",
+    "description" : "文本输入",
+    "body": ["\\text{$1} $2"]
+  }
+
+}
