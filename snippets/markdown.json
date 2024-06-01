@@ -75,6 +75,10 @@
     "prefix": "text",
     "description" : "文本输入",
     "body": ["\\text{$1} $2"]
-  }
-
+  },
+    "Insert Example": {
+        "prefix": ["example", "n"],
+        "body": "> [!EXAMPLE]\n> ",
+        "description": "Insert Note"
+    },
 }

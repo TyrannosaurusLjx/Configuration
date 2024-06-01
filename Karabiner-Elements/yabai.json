@@ -1,9 +1,9 @@
 {
-    "description": "hyper + Appname to open it",
+    "description": "yabai config",
     "manipulators": [
         {
             "from": {
-                "key_code": "v",
+                "key_code": "h",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -15,14 +15,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Visual Studio Code.app'"
+                    "shell_command": "yabai -m window --focus west"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "w",
+                "key_code": "l",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -34,14 +34,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Wechat.app'"
+                    "shell_command": "yabai -m window --focus east"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "e",
+                "key_code": "j",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -53,14 +53,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Microsoft Edge.app'"
+                    "shell_command": "yabai -m window --focus south"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "p",
+                "key_code": "k",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -72,14 +72,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'preview.app'"
+                    "shell_command": "yabai -m window --focus north"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "d",
+                "key_code": "right_arrow",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -91,14 +91,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'dingtalk.app'"
+                    "shell_command": "yabai -m space --focus next"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "n",
+                "key_code": "left_arrow",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -110,14 +110,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'neovide.app' --args --frame transparent"
+                    "shell_command": "yabai -m space --focus prev "
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "t",
+                "key_code": "period",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -129,14 +129,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'iTerm.app'"
+                    "shell_command": "yabai -m window --space next; yabai -m space --focus next"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "s",
+                "key_code": "comma",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -148,14 +148,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Safari.app'"
+                    "shell_command": "yabai -m window --space prev && yabai -m space --focus prev "
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "m",
+                "key_code": "slash",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -167,14 +167,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Mathematica.app'"
+                    "shell_command": "yabai -m window --toggle float"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "i",
+                "key_code": "up_arrow",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -186,14 +186,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Finder.app'"
+                    "shell_command": "yabai -m window --move abs:85:85 && yabai -m window --resize abs:1550:950"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "a",
+                "key_code": "down_arrow",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -205,14 +205,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Microsoft Outlook.app'"
+                    "shell_command": "yabai -m window --move abs:0:0 && yabai -m window --resize abs:2000:2000"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "y",
+                "key_code": "1",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -224,14 +224,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'NeteaseMusic.app'"
+                    "shell_command": "yabai -m space --focus 1"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "g",
+                "key_code": "2",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -243,14 +243,14 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'ChatMate.app'"
+                    "shell_command": "yabai -m space --focus 2"
                 }
             ],
             "type": "basic"
         },
         {
             "from": {
-                "key_code": "z",
+                "key_code": "3",
                 "modifiers": {
                     "mandatory": [
                         "left_command",
@@ -262,7 +262,121 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a '/opt/homebrew/bin/zathura'"
+                    "shell_command": "yabai -m space --focus 3"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "4",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 4"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "5",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 5"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "6",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 6"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "7",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 7"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "8",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 8"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "9",
+                "modifiers": {
+                    "mandatory": [
+                        "left_command",
+                        "left_option",
+                        "left_shift",
+                        "left_control"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "yabai -m space --focus 9"
                 }
             ],
             "type": "basic"
