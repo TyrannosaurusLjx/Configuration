@@ -205,7 +205,7 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'Microsoft Outlook.app'"
+                    "shell_command": "open -a 'Mail.app'"
                 }
             ],
             "type": "basic"
@@ -243,7 +243,7 @@
             },
             "to": [
                 {
-                    "shell_command": "open -a 'ChatMate.app'"
+                    "shell_command": "open -a 'ChatGpt.app'"
                 }
             ],
             "type": "basic"

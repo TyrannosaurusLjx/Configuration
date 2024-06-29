@@ -1,0 +1,63 @@
+#!/usr/bin/env sh
+
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+#
+# see this wiki page for information:
+#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
+#
+# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# sudo yabai --load-sa
+#
+
+
+# global settings
+yabai -m config                                 \
+	external_bar                 off:40:0       \
+	menubar_opacity              0.5            \
+	mouse_follows_focus          on            \
+	focus_follows_mouse          off            \
+	display_arrangement_order    default        \
+	window_origin_display        default        \
+	window_placement             second_child   \
+	window_zoom_persist          on             \
+	window_shadow                on             \
+	window_animation_duration    0.0            \
+	window_animation_easing      ease_out_circ  \
+	window_opacity_duration      0.1            \
+	window_opacity               on            \
+	active_window_opacity        0.95           \
+	normal_window_opacity        0.85           \
+	insert_feedback_color        0xffd75f5f     \
+	split_ratio                  0.50           \
+	split_type                   auto           \
+	auto_balance                 off            \
+	top_padding                  8              \
+	bottom_padding               8              \
+	left_padding                 8              \
+	right_padding                8              \
+	window_gap                   06             \
+	layout                       bsp            \
+	mouse_modifier               fn             \
+	mouse_action1                move           \
+	mouse_action2                resize         \
+	mouse_drop_action            swap
+
+
+
+
+echo "yabai configuration loaded.."
+
+
+# 放置微信 mail 钉钉交流软件
+yabai -m config --space 1 layout float
+
+# 放置网易云,访达等软件
+# yabai -m config --space 2 layout float
+
+# 不管理的应用
+yabai -m rule --add app="系统设置$" manage=off
+yabai -m rule --add app="访达$" manage=off
+yabai -m rule --add app="^.*$" manage=off
+
