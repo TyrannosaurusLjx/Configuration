@@ -1,11 +1,11 @@
 {
-    "description": "Change left_command+hjkl to arrow keys in wechat and terminal",
+    "description": "Change left_command+hjkl to arrow keys in wechat and Typora",
     "manipulators": [
         {
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.tencent.xinWeChat"
+                        "com.tencent.xinWeChat","abnerworks.Typora" 
                         
                     ],
                     "type": "frontmost_application_if"
@@ -33,7 +33,7 @@
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.tencent.xinWeChat"
+                        "com.tencent.xinWeChat","abnerworks.Typora"
                         
                     ],
                     "type": "frontmost_application_if"
@@ -61,7 +61,7 @@
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.tencent.xinWeChat"
+                        "com.tencent.xinWeChat","abnerworks.Typora"
                         
                     ],
                     "type": "frontmost_application_if"
@@ -89,7 +89,7 @@
             "conditions": [
                 {
                     "bundle_identifiers": [
-                        "com.tencent.xinWeChat"
+                        "com.tencent.xinWeChat","abnerworks.Typora"
                         
                     ],
                     "type": "frontmost_application_if"
