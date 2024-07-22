@@ -1,0 +1,85 @@
+live_config_reload = true
+
+[window]
+decorations = "Transparent"
+opacity = 0.95
+blur = true
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[font]
+normal = {family = "Hack Nerd Font", style = "Regular"}
+bold = {family = "Hack Nerd Font", style = "Bold"}
+italic = {family = "Hack Nerd Font", style = "Italic"}
+size = 16.0
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#4d4d4d"
+blue = "#a277ff"
+cyan = "#61ffca"
+green = "#61ffca"
+magenta = "#a277ff"
+red = "#ff6767"
+white = "#edecee"
+yellow = "#ffca85"
+
+[colors.cursor]
+cursor = "#00D1FF"
+
+# [colors.normal]
+# black = "#110f18"
+# blue = "#a277ff"
+# cyan = "#61ffca"
+# green = "#61ffca"
+# magenta = "#a277ff"
+# red = "#ff6767"
+# white = "#edecee"
+# yellow = "#ffca85"
+
+[colors.primary]
+background = "#15141b"
+foreground = "#edecee"
+
+[colors.search.focused_match]
+background = "#00D1FF"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[colors.selection]
+background = "#29263c"
+text = "CellForeground"
+
+[cursor.style]
+shape = "Beam"
+
+[selection]
+save_to_clipboard = true # 复制选择到剪切板
+
+# [mouse]
+# hide_when_typing = true
+
+[keyboard]
+bindings = [
+{ key = "r", mods = "Command", chars = "clear" },
+{ key = "Escape", action = "ToggleViMode"},
+{ key = "n", mods = "Command", action = "SpawnNewInstance"},
+{ key = "t", mods = "Command", action = "CreateNewTab"}
+
+# 发现不支持多标签页,卒
+
+]
+
+
+
+
+
+
+
