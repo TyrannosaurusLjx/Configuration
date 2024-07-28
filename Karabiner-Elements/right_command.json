@@ -1,0 +1,24 @@
+{
+    "manipulators": [
+        {
+            "description": "Change right command to option + shift",
+            "from": {
+                "key_code": "right_command",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                        "left_option"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
