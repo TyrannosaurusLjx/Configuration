@@ -4,3 +4,6 @@
 [submodule "Neovide"]
 	path = Neovide
 	url = git@github.com:TyrannosaurusLjx/Neovide-NvChad.git
+[submodule "hammerspoon"]
+	path = hammerspoon
+	url = https://github.com/TyrannosaurusLjx/hammerspoon
