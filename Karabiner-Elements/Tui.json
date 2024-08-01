@@ -1,0 +1,104 @@
+{
+  "description": "Tui set",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "t",
+        "modifiers": {
+          "mandatory": [
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "TuiMode",
+            "value": 1
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"Tui Mode Enabled\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "TuiMode",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "TuiMode",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"Exit Tui Mode\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "TuiMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "y"
+      },
+      "to": [
+        {
+          "shell_command": "osascript ~/Desktop/workspace/Configuration/scripts/karabiner/open-yazi.scpt && osascript -e 'display notification \"Open yazi and Exit TuiMode\" with title \"Karabiner-Elements\"'" 
+        },
+        {
+          "set_variable": {
+            "name": "TuiMode",
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "TuiMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "f"
+      },
+      "to": [
+        {
+          "shell_command": "osascript ~/Desktop/workspace/Configuration/scripts/karabiner/open-fzf.scpt && osascript -e 'display notification \"Open fzf and Exit TuiMode\" with title \"Karabiner-Elements\"'"
+        },
+        {
+          "set_variable": {
+            "name": "TuiMode",
+            "value": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "description": "Set Vim Mode in everwhere",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "v",
+        "modifiers": {
+          "mandatory": [
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "VimMode",
+            "value": 1
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"Vim Mode Enabled\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "VimMode",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "VimMode",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"Exit Vim Mode\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "VimMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "h"
+      },
+      "to": [
+        {
+          "key_code": "left_arrow"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "VimMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "j"
+      },
+      "to": [
+        {
+          "key_code": "down_arrow"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "VimMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "k"
+      },
+      "to": [
+        {
+          "key_code": "up_arrow"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "VimMode",
+            "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "l"
+      },
+      "to": [
+        {
+          "key_code": "right_arrow"
+        }
+      ]
+    }
+  ]
+}

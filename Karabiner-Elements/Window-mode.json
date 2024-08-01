@@ -1,0 +1,889 @@
+{
+  "description": "Window manage with yabai commands",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "w",
+        "modifiers": {
+          "mandatory": [
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "WindowMode",
+            "value": 1
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"WindowMode Enabled\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "WindowMode",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "WindowMode",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"Exit WindowMode\" with title \"Karabiner-Elements\"'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "q"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:0:0:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "w"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:1:0:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "e"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:2:0:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "a"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:0:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "s"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:1:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "d"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:2:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "z"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:0:2:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "x"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:1:2:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "c"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 3:3:2:2:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "r"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:3:0:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "t"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:3:2:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "v"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:3:0:0:2:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "b"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:3:1:0:2:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "f"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:1:0:0:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "g"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 16:16:1:1:14:14" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "f",
+        "modifiers": {
+          "mandatory": [
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 9:16:2:1:12:7" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "h"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:2:0:0:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "l"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 1:2:1:0:1:1"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "j"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:1:0:1:1:1" 
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "k"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:1:0:0:1:1"
+        }
+      ]
+    },
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "u"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:2:0:0:1:1"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "i"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:2:1:0:1:1"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "n"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:2:0:1:1:1"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "m"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m window --grid 2:2:1:1:1:1"
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "close_bracket"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus next"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "open_bracket"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus prev"
+        }
+      ]
+    },
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "1"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 1"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "2"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 2"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "3"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 3"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "4"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 4"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "5"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 5"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "6"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 6"
+        }
+      ]
+      },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "7"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 7"
+        }
+      ]
+      },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "8"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 8"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "9"
+      },
+      "to": [
+        {
+          "shell_command": "yabai -m space --focus 9"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "0"
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m space --focus last"
+        }
+      ]
+    },
+
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "left_arrow"
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize top_left:-50:0"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "left_arrow",
+        "modifiers": {
+          "mandatory": [
+            "left_shift"
+          ]
+        }
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize bottom_right:-50:0"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "right_arrow"
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize bottom_right:50:0"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "right_arrow",
+        "modifiers": {
+          "mandatory": [
+            "left_shift"
+          ]
+        }
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize top_left:50:0"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "up_arrow"
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize top_left:0:-50"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "up_arrow",
+        "modifiers": {
+          "mandatory": [
+            "left_shift"
+          ]
+        }
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize bottom_right:0:-50"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "down_arrow"
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize bottom_right:0:50"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "WindowMode",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "down_arrow",
+        "modifiers": {
+          "mandatory": [
+            "left_shift"
+          ]
+        }
+      },
+      "to" : [
+        {
+          "shell_command": "yabai -m window --resize top_left:0:50"
+        }
+      ]
+    }
+
+  ]
+}

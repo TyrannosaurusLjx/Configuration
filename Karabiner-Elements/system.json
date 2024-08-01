@@ -1,0 +1,164 @@
+{
+  "description": "System enhancements",
+  "manipulators": [
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "s",
+        "modifiers": {
+          "mandatory": [
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "SystemEnhancements",
+            "value": 1
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"System enhancements setting\" with title \"System enhancements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "SystemEnhancements",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "escape",
+        "modifiers": {
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "SystemEnhancements",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"System enhancements setting close\" with title \"System enhancements\"'"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "SystemEnhancements",
+        "value": 1
+        },
+        {
+          "type": "variable_if",
+          "name": "clipboard",
+          "value": 0
+        }
+      ],
+      "from": {
+        "key_code": "c",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "SystemEnhancements",
+            "value": 0
+          }
+        },
+        {
+          "set_variable": {
+            "name": "clipboard",
+            "value": 1
+          }
+        },
+        {
+          "shell_command": "sh ~/Desktop/workspace/Configuration/scripts/karabiner/clipboard/main.sh"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "SystemEnhancements",
+        "value": 1
+        },
+        {
+          "type": "variable_if",
+          "name": "clipboard",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "c",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "SystemEnhancements",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"clipboard monitor had beed opened\" with title \"System enhancements\"'"
+        }
+      ]
+    },
+
+
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "SystemEnhancements",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "r",
+        "modifiers":{
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "SystemEnhancements",
+            "value": 0
+          }
+        },
+        {
+          "set_variable": {
+            "name": "clipboard",
+            "value": 0
+          }
+        },
+        {
+          "shell_command": "osascript -e 'display notification \"System enhancements setting reload\" with title \"System enhancements\"'"
+        }
+      ]
+    }
+  ]
+}
