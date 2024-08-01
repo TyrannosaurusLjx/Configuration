@@ -51,7 +51,27 @@
         }
       ]
     },
-
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "WindowMode",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "slash",
+        "modifiers":{
+          "mandatory": ["right_shift"]
+        }
+      },
+      "to":[
+        {
+          "shell_command": "open ~/Configuration/scripts/karabiner/Window/README.png"
+        }
+      ]
+    },
     {
       "type": "basic",
       "conditions": [

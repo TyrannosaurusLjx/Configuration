@@ -52,6 +52,32 @@
         }
       ]
     },
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "SystemEnhancements",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "slash",
+        "modifiers": {
+          "mandatory": [
+            "right_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open ~/Configuration/scripts/karabiner/System/README.png"
+        }
+      ]
+    },
+
+
     {
       "type": "basic",
       "conditions": [
@@ -86,7 +112,7 @@
           }
         },
         {
-          "shell_command": "sh ~/Desktop/workspace/Configuration/scripts/karabiner/clipboard/main.sh"
+          "shell_command": "sh ~/Configuration/scripts/karabiner/clipboard/main.sh"
         }
       ]
     },
