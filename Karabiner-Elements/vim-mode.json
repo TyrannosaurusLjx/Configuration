@@ -51,6 +51,30 @@
         }
       ]
     },
+
+
+    {
+      "type": "basic",
+      "conditions": [
+        {
+        "type": "variable_if",
+        "name": "VimMode",
+        "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "slash",
+        "modifiers":{
+          "mandatory": ["right_shift"]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open ~/Configuration/scripts/karabiner/Vim/README.png"
+        }
+      ]
+    },
+
     {
       "type": "basic",
       "conditions": [
