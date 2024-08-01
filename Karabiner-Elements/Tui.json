@@ -90,7 +90,7 @@
       },
       "to": [
         {
-          "shell_command": "osascript ~/Configuration/scripts/Karabiner/open-yazi/open-yazi.scpt && osascript -e 'display notification \"Open yazi and Exit TuiMode\" with title \"Karabiner-Elements\"'" 
+          "shell_command": "osascript ~/Configuration/scripts/Karabiner/Tui/open-yazi/open-yazi.scpt && osascript -e 'display notification \"Open yazi and Exit TuiMode\" with title \"Karabiner-Elements\"'" 
         },
         {
           "set_variable": {
@@ -114,7 +114,7 @@
       },
       "to": [
         {
-          "shell_command": "osascript ~/Configuration/scripts/karabiner/open-fzf/open-fzf.scpt && osascript -e 'display notification \"Open fzf and Exit TuiMode\" with title \"Karabiner-Elements\"'"
+          "shell_command": "osascript ~/Configuration/scripts/karabiner/Tui/open-fzf/open-fzf.scpt && osascript -e 'display notification \"Open fzf and Exit TuiMode\" with title \"Karabiner-Elements\"'"
         },
         {
           "set_variable": {
