@@ -1,6 +1,10 @@
 # 配置说明
 
 
+- [Terminal-Message](https://github.com/julienXX/terminal-notifier)
+
+- [Alert](https://github.com/vjeantet/alerter)
+
 ## system
 
 - 按下 option-shift + s 进入 SystemEnhancements
@@ -29,4 +33,7 @@
 - 按下 option-shift + w 进入 window manager
 
     - qweasdzxc
+
+
+
 

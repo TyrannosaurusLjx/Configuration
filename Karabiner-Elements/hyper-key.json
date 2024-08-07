@@ -1,0 +1,41 @@
+{
+    "manipulators": [
+        {
+            "description": "Change caps_lock to escape if pressed alone, or to command+control+option+shift if held down.",
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "to_if_alone": [
+                {
+                    "key_code": "escape"
+                }
+            ],
+            "to_if_held_down": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                        "left_command",
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

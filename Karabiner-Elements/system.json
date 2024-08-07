@@ -112,7 +112,7 @@
           }
         },
         {
-          "shell_command": "sh ~/Configuration/scripts/karabiner/clipboard/main.sh"
+          "shell_command": "sh ~/Configuration/scripts/karabiner/System/clipboard/main.sh"
         }
       ]
     },
